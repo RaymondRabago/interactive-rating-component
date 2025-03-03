@@ -1,0 +1,23 @@
+/* Container */
+$container: 1140px;
+$container-wide: 1340px; 
+
+/* Breakpoints */
+$phablet: 500px;
+$tablet: 768px;
+$desktop: 992px;
+$large-desktop: 1200px;
+$xl-desktop: 1400px;
+$xxl-desktop: 1600px;
+
+/* Font - Familys */
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+
+/* Font - Usages */ 
+$font-heading: $font-primary;
+$font-body: $font-secondary;
+
+/* Colors */ 
+$clr-default: #414141;
+$clr-body-bg: #141518;

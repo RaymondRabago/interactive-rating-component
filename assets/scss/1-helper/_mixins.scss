@@ -1,0 +1,200 @@
+/* Minus 0.02 to the max-width/desktop breakpoints is based on: 
+https://getbootstrap.com/docs/5.0/layout/breakpoints/
+*/
+
+/* Mixin for min-width breakpoints */
+@mixin min-break($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+/* Mixin for max-width breakpoints */
+@mixin max-break($breakpoint) {
+    @media (max-width: #{ $breakpoint - 0.02 }) {
+        @content;
+    }
+}
+
+/* Mixin for min-width and max-width breakpoints */
+@mixin between-break($min, $max) {
+  @media (min-width: $min) and (max-width: #{ $max - 0.02 }) {
+    @content;
+  }
+}
+
+/* Mixin for font-face */
+@mixin font-face($font-name, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: #{$font-name};
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+         url('#{$file-path}.woff2') format('woff2'),
+         url('#{$file-path}.woff') format('woff'),
+         url('#{$file-path}.ttf') format('truetype'),
+         url('#{$file-path}.svg##{$font-name}') format('svg');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+/* Mixin for overlay */
+@mixin overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Mixin for ellipsis with line clamp */
+@mixin ellipsis($lines: 3) {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+}
+ 
+/* Mixin for button states */
+/*
+  BUTTON STATE - PARAMETER 
+  $defaultClr   = Default Color (Background & Border)
+  $defaultFgClr = Default Foerground Color
+  
+  $hoverBgClr   = Hover Background Color
+  $hoverBdrClr  = Hover Border Color
+  $hoverFgClr   = Hover Foregound Color
+
+  $activeBgClr  = Active Background Color
+  $activeBdrClr = Active Border Color
+  $activeFgClr  = Active Foregound Color  
+*/ 
+@mixin btn-state($defaultBgClr, $defaultBdrClr, $defaultFgClr, $hoverBgClr, $hoverBdrClr, $hoverFgClr, $activeBgClr, $activeBdrClr, $activeFgClr) {
+
+    /* Default State */ 
+    background-color: $defaultBgClr;
+    border-color: $defaultBdrClr;
+    color: $defaultFgClr;
+    
+    i, span.icon {
+      color: $defaultFgClr;
+    }
+  
+    svg.color-fill {
+      fill: $defaultFgClr;
+    }
+  
+    svg.color-stroke {
+      stroke: $defaultFgClr;
+    }
+  
+    /* Hover State */ 
+    &:hover,
+    &:focus-visible {
+        background-color: $hoverBgClr;
+        border-color: $hoverBdrClr;
+        color: $hoverFgClr;
+  
+        i, span.icon {
+          color: $hoverFgClr;
+        }     
+        
+        svg.color-fill {
+          fill: $hoverFgClr;
+        }
+      
+        svg.color-stroke {
+          stroke: $hoverFgClr;
+        }      
+    }
+  
+    /* Active State */ 
+    &:active {
+        background-color: $activeBgClr;
+        border-color: $activeBdrClr;
+        color: $activeFgClr;
+  
+        i, span.icon {
+          color: $activeFgClr;
+        }     
+        
+        svg.color-fill {
+          fill: $activeFgClr;
+        }
+      
+        svg.color-stroke {
+          stroke: $activeFgClr;
+        }        
+  
+    }
+  
+}
+
+/* Mixin for link states */
+/* LINK STATE 
+  LINK STATE - PARAMETER 
+  $defaultFgClr = Default Foerground Color
+  $hoverFgClr   = Hover Foregound Color
+  $activeFgClr  = Active Foregound Color  
+*/ 
+@mixin link-state($defaultFgClr, $hoverFgClr, $activeFgClr) {
+    color: $defaultFgClr;
+  
+    i, span.icon {
+      color: $defaultFgClr;
+    }  
+  
+    svg.color-fill {
+      fill: $defaultFgClr;
+    }
+  
+    svg.color-stroke {
+      stroke: $defaultFgClr;
+    }  
+  
+    // HOVER STATE
+    &:hover, 
+    &:focus-visible {
+      color: $hoverFgClr;
+  
+      i, span.icon {
+        color: $hoverFgClr;
+      }   
+      
+      svg.color-fill {
+        fill: $hoverFgClr;;
+        transition: all 0.4s;
+      }
+    
+      svg.color-stroke {
+        stroke: $hoverFgClr;;
+        transition: all 0.4s;
+      }     
+  
+    }
+  
+    // ACTIVE STATE 
+    &:active, 
+    &:visited {
+      // color: $activeFgClr;
+  
+      i, span.icon {
+        color: $activeFgClr;
+      }   
+      
+      svg.color-fill {
+        fill: $activeFgClr;
+      }
+    
+      svg.color-stroke {
+        stroke: $activeFgClr;
+      }    
+  
+    }  
+  
+}
