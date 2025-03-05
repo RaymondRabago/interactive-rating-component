@@ -3,6 +3,7 @@ $container: 1140px;
 $container-wide: 1340px; 
 
 /* Breakpoints */
+$mobile: 375px;
 $phablet: 500px;
 $tablet: 768px;
 $desktop: 992px;
@@ -11,13 +12,17 @@ $xl-desktop: 1400px;
 $xxl-desktop: 1600px;
 
 /* Font - Familys */
-$font-primary: 'Open Sans', sans-serif;
-$font-secondary: 'Open Sans', sans-serif;
+$font-primary:  "Overpass", sans-serif;
 
 /* Font - Usages */ 
 $font-heading: $font-primary;
-$font-body: $font-secondary;
+$font-body: $font-primary;
 
 /* Colors */ 
 $clr-default: #414141;
 $clr-body-bg: #141518;
+$clr-white: #ffffff;
+$clr-light-grey: #A7B1C2;
+$clr-dark-blue: #2E4053;
+$clr-darker-blue:  #141A24;
+$clr-orange: #FC7614;

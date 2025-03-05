@@ -1,0 +1,57 @@
+.choices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        background-color: rgba($clr-dark-blue, 0.3);
+        border-radius: 50px;
+
+        font-size: 1rem;
+        font-weight: 600;
+
+        color: $clr-light-grey;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $clr-white;
+        }
+    }
+
+    input[type="radio"]:checked + label {
+        background-color: $clr-orange;
+    }    
+
+    input[type="radio"]:checked + label,
+    input[type="radio"] + label:hover {
+        color: $clr-dark-blue;
+    }
+
+    // DeskResponsive (>= 500px)
+    @include min-break($phablet) {
+        label {
+            width: 55px;
+            height: 55px;
+        }
+    };
+
+    // MobResponsive (<= 500px)
+    @include max-break($phablet) {
+        label {
+            width: 45px;
+            height: 45px;
+        }
+    };
+
+}
+

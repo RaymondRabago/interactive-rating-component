@@ -74,8 +74,14 @@ textarea {
 }
 
 /* CUSTOM: Add default body background color */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
-    background-color: #f9f9f9;
+    display: grid;
+    background-color: $clr-body-bg;
 }
 
 /* CUSTOM: Add scroll margin top */
