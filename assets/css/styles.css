@@ -121,6 +121,7 @@ body {
   display: -ms-grid;
   display: grid;
   background-color: #141518;
+  height: 100%;
 }
 
 /* CUSTOM: Add scroll margin top */
@@ -352,6 +353,8 @@ h6, .h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .choices input[type=radio] {
   display: none;
@@ -376,10 +379,10 @@ h6, .h6 {
   cursor: pointer;
 }
 .choices label:hover {
-  background-color: #ffffff;
+  background-color: #FC7614;
 }
 .choices input[type=radio]:checked + label {
-  background-color: #FC7614;
+  background-color: #ffffff;
 }
 .choices input[type=radio]:checked + label,
 .choices input[type=radio] + label:hover {
@@ -396,6 +399,12 @@ h6, .h6 {
     width: 45px;
     height: 45px;
   }
+}
+
+.error {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  color: #CE0000;
 }
 
 button,
@@ -417,7 +426,7 @@ input[type=button] {
   width: 100%;
   font-family: "Overpass", sans-serif;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 1.2px;
@@ -425,7 +434,7 @@ input[type=button] {
   border-radius: 50px;
   border: 0;
   background-color: #FC7614;
-  color: #2E4053;
+  color: #141A24;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
@@ -437,3 +446,19 @@ input[type=button]:focus-visible {
 }
 
 /* LAYOUT */
+.attribution {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  color: #A7B1C2;
+  line-height: 1;
+}
+.attribution a {
+  color: #ffffff;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.attribution a:hover {
+  color: #FC7614;
+}

@@ -11,7 +11,7 @@ input[type=button] {
 
     font-family: $font-body;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 1.2px;
@@ -21,7 +21,7 @@ input[type=button] {
     border: 0;
 
     background-color: $clr-orange;
-    color: $clr-dark-blue;
+    color: $clr-darker-blue;
     transition: all 0.4s ease-in-out;
     cursor: pointer;
 

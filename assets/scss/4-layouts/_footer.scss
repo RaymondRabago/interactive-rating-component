@@ -1,3 +1,19 @@
 .attribution {
-    
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+
+    color: $clr-light-grey;
+
+    line-height: 1;
+
+    a {
+        color: $clr-white;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+            color: $clr-orange;
+        }
+    }
 }
