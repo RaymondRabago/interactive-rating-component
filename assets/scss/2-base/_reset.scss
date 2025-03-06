@@ -79,12 +79,6 @@ html, body {
     margin: 0;
 }
 
-body {
-    display: grid;
-    background-color: $clr-body-bg;
-    height: 100%
-}
-
 /* CUSTOM: Add scroll margin top */
 * {
     scroll-margin-top: 0;

@@ -1,0 +1,6 @@
+body {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background-color: $clr-darker-blue;
+    height: 100%
+}
