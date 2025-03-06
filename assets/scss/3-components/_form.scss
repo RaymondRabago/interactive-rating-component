@@ -9,13 +9,13 @@
         margin-top: 30px;
     }
 
+    &.thank-you {
+        padding: 50px 30px;
+    }
+
     // DeskResponive (>= 500px)
     @include min-break($phablet) {
         max-width: 415px;
-
-        &.thank-you {
-            padding: 50px 30px;
-        }
     }
 
     // DeskResponive (>= 375px)
@@ -25,16 +25,15 @@
         &:not(.thank-you) {
             padding: 30px;
         }
-
-        &.thank-you {
-            padding: 50px 30px;
-        }
     }
 
     // MobResponive (<= 375px)
     @include max-break($mobile) {
         width: calc(100% - 40px);
-        padding: 25px 20px;
+
+        &:not(.thank-you) {
+            padding: 25px 20px;
+        }  
     }
 }
 
